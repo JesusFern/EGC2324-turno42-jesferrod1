@@ -40,7 +40,6 @@ jobs:
         python manage.py migrate
     - name: Run tests
       run: |
-        cd decide
         coverage run --branch --source=. ./manage.py test  --keepdb
         coverage xml
 
